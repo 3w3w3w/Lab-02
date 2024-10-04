@@ -93,8 +93,12 @@ plastic_data_all %>% count(region)
 
 ```{r Ex2, message = FALSE}
 # Write your code here to answer exercise 2
-  plastic_data_all %>%
-    mutate(total_mismanage_plastic = (mismanaged_plastic) * (population))
+plastic_data_all <- plastic_data_all %>%
+  mutate(total_mismanage_plastic = (mismanaged_plastic) * (population))
+  
+  
+
+
 
 ```
 
@@ -103,9 +107,13 @@ plastic_data_all %>% count(region)
 
 ```{r Ex3, message = FALSE}
 # Write your code here to answer exercise 3
-
-
-
+plastic_data_all <- plastic_data_all %>%
+  mutate(pct_mismanaged_plastic_ocean = mismanaged_plastic_ocean/mismanaged_plastic)
+  
+plastic_data_all %>%
+  group_by(region) %>%
+  summarise(median_pct_ocean = median(pct_mismanaged_plastic_ocean))
+  
 ```
 
 
