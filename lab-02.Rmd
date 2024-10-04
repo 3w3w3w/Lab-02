@@ -93,7 +93,7 @@ plastic_data_all %>% count(region)
 
 ```{r Ex2, message = FALSE}
 # Write your code here to answer exercise 2
-<<<<<<< HEAD
+
 plastic_data_all <- plastic_data_all %>%
   mutate(total_mismanage_plastic = (mismanaged_plastic) * (population))
   
@@ -101,11 +101,11 @@ plastic_data_all <- plastic_data_all %>%
 
 
 
-=======
+
   plastic_data_all %>%
     mutate(total_mismanage_plastic = (mismanaged_plastic) * (population)) %>%
     count(region)
->>>>>>> ad022e430e627abe0bbcb3bed73be26a012c64ad
+
 ```
 
 
